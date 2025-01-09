@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Custom Form Elements</h1>
+      <form
+        method="post"
+        action="https://api-gateway.fullstack.edu.vn/action_page.php"
+      >
+        <h2>Checkbox</h2>
+        <div class="form-group">
+          <input type="checkbox" name="before" id="before" />
+          <label for="before">Before</label>
+        </div>
+
+        <div class="form-group">
+          <label for="after" class="checkbox">
+            <input type="checkbox" name="after" id="after" hidden />
+            After
+          </label>
+        </div>
+
+        <h2>Radio</h2>
+        <div class="form-group">
+          <input type="radio" name="before" id="before1" value="before1" />
+          <label for="before1">Before 1</label>
+
+          <input type="radio" name="before" id="before2" value="before2" />
+          <label for="before2">Before 2</label>
+        </div>
+
+        <div class="form-group">
+          <label class="after" for="after1">
+            <input
+              type="radio"
+              name="after"
+              id="after1"
+              value="after1"
+              hidden
+            />
+            After 1
+          </label>
+
+          <label class="after" for="after2">
+            <input
+              type="radio"
+              name="after"
+              id="after2"
+              value="after2"
+              hidden
+            />
+            After 2
+          </label>
+        </div>
+
+        <h2>Switch button</h2>
+        <div class="form-group">
+          <input type="checkbox" name="switch-before" id="switch-before" />
+          <label for="switch-before">Before</label>
+        </div>
+
+        <div class="form-group switch">
+          <input type="checkbox" name="switch-after" id="switch-after" hidden />
+          <label for="switch-after"></label>
+        </div>
+
+        <h2>File</h2>
+        <div class="form-group">
+          <input
+            type="file"
+            id="avatar"
+            name="avatar"
+            onchange="preview.src = window.URL.createObjectURL(this.files[0])"
+            hidden
+          />
+          <label class="form-label" for="avatar">
+            <img
+              id="preview"
+              class="avatar-preview"
+              src="https://files.fullstack.edu.vn/f8-prod/manual_uploads/htmlcss-pro/avatar-placeholder.webp"
+              alt=""
+            />
+          </label>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
